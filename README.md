@@ -24,10 +24,10 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 |--- | --- | ---|
 |Can take a number from a user and display a result | 5 | 5 |
 |Can take a number from a user and return a range of numbers from 1 to the chosen number | 4 | 1, 2, 3, 4|
+|User should be able to enter a new number and see new results | --- | ---|
 |Numbers divisible by 3 are replaced with "ping" | 4 | 1, 2, ping, 4|
 |Numbers divisible by 5 are replaced with "pong" | 6 | ..., 4, pong, 6|
 |Numbers divisible by 15 are replaced with "ping-pong" | 16 | 13, 14, ping pong, 16|
-|User should be able to enter a new number and see new results | --- | ---|
 
 ## Known Bugs
 

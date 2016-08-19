@@ -1,6 +1,7 @@
 $(function() {
   $("form#pingpongform").submit(function(event) {
     event.preventDefault();
+    $( ".result" ).empty();
     var userInputNumber = $("input#inputnumber").val();
     pingpong(userInputNumber);
   });
