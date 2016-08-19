@@ -2,8 +2,7 @@ $(function() {
   $("form#pingpongform").submit(function(event) {
     event.preventDefault();
     var userInputNumber = $("input#inputnumber").val();
-    var returnValue = pingpong(userInputNumber);
-    $("#result").text(returnValue);
+    pingpong(userInputNumber);
   });
 });
 
@@ -11,11 +10,16 @@ $(function() {
 
 
 
+
+
+
 var pingpong = function(userInputNumber) {
-  var result = "";
   for (var i = parseInt(userInputNumber); i > 0 ; i--) {
-    alert(userInputNumber);
-    result = userInputNumber;
-    return result;
+    if (i > 0){
+      $("ul.result").append("<li>" + userInputNumber + "</li>");
+      userInputNumber = userInputNumber - 1
+    } else {
     }
+  }
+  return result;
 };
