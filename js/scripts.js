@@ -16,8 +16,10 @@ $(function() {
 
 var pingpong = function(userInputNumber) {
   for (var i = parseInt(userInputNumber); i > 0 ; i--) {
-
-    if ( i % 3 === 0 ){
+    if ( i % 5 === 0 ){
+      $("ul.result").append("<li>" + "pong" + "</li>");
+      userInputNumber = userInputNumber - 1;
+    } else if ( i % 3 === 0 ){
       $("ul.result").append("<li>" + "ping" + "</li>");
       userInputNumber = userInputNumber - 1;
     } else if ( i > 0 ){
