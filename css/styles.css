@@ -18,6 +18,23 @@ html {
 }
 body {
   margin: 10px;
-  background-color: grey;
+  background-image: url(http://www.rvrma.org/images/icons-lifestyle/tennis/PingPont.jpg);
   height:100%;
+}
+.container {
+  border: solid;
+  border-color: red;
+  background-color: blue;opacity:0.85;
+}
+h1{
+  color:orange;
+}
+h3{
+  color:orange;
+}
+p{
+  color:orange;
+}
+li{
+  color:orange;
 }
