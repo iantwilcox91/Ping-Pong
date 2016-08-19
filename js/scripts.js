@@ -8,7 +8,6 @@ $(function() {
 });
 
 
-
 var pingpong = function(userInputNumber) {
   for (var i = parseInt(userInputNumber); i > 0 ; i--) {
     if ( i % 15 === 0 ){
@@ -25,5 +24,4 @@ var pingpong = function(userInputNumber) {
       userInputNumber = userInputNumber - 1;
     }
   }
-
 };
