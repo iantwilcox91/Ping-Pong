@@ -1,3 +1,49 @@
+// // business logic?
+// var numberToArray{
+//
+// }
+//
+//
+// var pingpong = function(userInputNumber) {
+//   for (var i = parseInt(userInputNumber); i > 0 ; i--) {
+//     if ( i % 15 === 0 ){
+//       return "ping-pong";
+//       userInputNumber = userInputNumber - 1;
+//     } else if ( i % 5 === 0 ){
+//       return "pong";
+//       userInputNumber = userInputNumber - 1;
+//     } else if ( i % 3 === 0 ){
+//       return "ping";
+//       userInputNumber = userInputNumber - 1;
+//     } else if ( i > 0 ){
+//       return userInputNumber;
+//       userInputNumber = userInputNumber - 1;
+//     }
+//   }
+// };
+//
+//
+//
+//
+// // user interface logic?
+// $(function() {
+//   $("form#pingpongform").submit(function(event) {
+//     event.preventDefault();
+//     $( ".result" ).empty();
+//     var userInputNumber = $("input#inputnumber").val();
+//     $("ul.result").append("<li>" + pingpong(userInputNumber) + "</li>");
+//   });
+// });
+//
+//
+
+
+// JavaScript business logic and user interface logic must be separate!!!!!
+
+
+
+
+
 $(function() {
   $("form#pingpongform").submit(function(event) {
     event.preventDefault();
