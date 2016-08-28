@@ -1,73 +1,39 @@
-// // business logic?
-// var numberToArray{
-//
-// }
-//
-//
-// var pingpong = function(userInputNumber) {
-//   for (var i = parseInt(userInputNumber); i > 0 ; i--) {
-//     if ( i % 15 === 0 ){
-//       return "ping-pong";
-//       userInputNumber = userInputNumber - 1;
-//     } else if ( i % 5 === 0 ){
-//       return "pong";
-//       userInputNumber = userInputNumber - 1;
-//     } else if ( i % 3 === 0 ){
-//       return "ping";
-//       userInputNumber = userInputNumber - 1;
-//     } else if ( i > 0 ){
-//       return userInputNumber;
-//       userInputNumber = userInputNumber - 1;
-//     }
-//   }
-// };
-//
-//
-//
-//
-// // user interface logic?
-// $(function() {
-//   $("form#pingpongform").submit(function(event) {
-//     event.preventDefault();
-//     $( ".result" ).empty();
-//     var userInputNumber = $("input#inputnumber").val();
-//     $("ul.result").append("<li>" + pingpong(userInputNumber) + "</li>");
-//   });
-// });
-//
-//
-
-
-// JavaScript business logic and user interface logic must be separate!!!!!
-
-
-
-
-
-$(function() {
-  $("form#pingpongform").submit(function(event) {
-    event.preventDefault();
-    $( ".result" ).empty();
-    var userInputNumber = $("input#inputnumber").val();
-    pingpong(userInputNumber);
-  });
-});
-
+// business logic
+var finalArrayForShowing = []
 
 var pingpong = function(userInputNumber) {
+  var userInputNumber = $("input#inputnumber").val();
   for (var i = parseInt(userInputNumber); i > 0 ; i--) {
     if ( i % 15 === 0 ){
-      $("ul.result").append("<li>" + "ping-pong" + "</li>");
+      var newLength = finalArrayForShowing.push("ping-pong");
       userInputNumber = userInputNumber - 1;
     } else if ( i % 5 === 0 ){
-      $("ul.result").append("<li>" + "pong" + "</li>");
+      var newLength = finalArrayForShowing.push("pong");
       userInputNumber = userInputNumber - 1;
     } else if ( i % 3 === 0 ){
-      $("ul.result").append("<li>" + "ping" + "</li>");
+      var newLength = finalArrayForShowing.push("ping");
       userInputNumber = userInputNumber - 1;
     } else if ( i > 0 ){
-      $("ul.result").append("<li>" + userInputNumber + "</li>");
+      var newLength = finalArrayForShowing.push(i);
       userInputNumber = userInputNumber - 1;
     }
   }
 };
+
+var clear = function() {
+  $( ".result" ).empty();
+  finalArrayForShowing = []
+}
+
+
+// user interface logic?
+$(function() {
+  $("form#pingpongform").submit(function(event) {
+    event.preventDefault();
+    clear();
+    pingpong();
+    finalArrayForShowing.forEach(function (item, index, array) {
+      $("ul.result").append("<li>" + item + "</li>");
+    });
+  });
+});
